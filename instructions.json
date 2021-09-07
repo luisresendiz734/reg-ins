@@ -1,0 +1,678 @@
+[
+	{
+		"ins": "LI",
+		"format": "I",
+		"example": "LI RD, #SLIT16",
+		"result": "RD = SLIT16",
+		"ins_format": [
+			{
+				"name": "01",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "SLIT16",
+				"length": 16
+			}
+		],
+		"op_code": 1
+	},
+	{
+		"ins": "LWI",
+		"format": "I",
+		"example": "LWI RD, LIT16",
+		"result": "RD = MEM[LIT16]",
+		"ins_format": [
+			{
+				"name": "02",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "LIT16",
+				"length": 16
+			}
+		],
+		"op_code": 2
+	},
+	{
+		"ins": "LW",
+		"format": "I",
+		"example": "LW RD, LIT12(RT)",
+		"result": "RD = MEM[RT + LIT12]",
+		"ins_format": [
+			{
+				"name": "23",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "LIT12",
+				"length": 12
+			}
+		],
+		"op_code": 23
+	},
+	{
+		"ins": "SWI",
+		"format": "I",
+		"example": "SWI RD, LIT16",
+		"result": "MEM[LIT16] = RD",
+		"ins_format": [
+			{
+				"name": "03",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "LIT16",
+				"length": 16
+			}
+		],
+		"op_code": 3
+	},
+	{
+		"ins": "SW",
+		"format": "I",
+		"example": "SW RD, LIT12(RT)",
+		"result": "MEM[RT + LIT12] = RD",
+		"ins_format": [
+			{
+				"name": "04",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "LIT12",
+				"length": 12
+			}
+		],
+		"op_code": 4
+	},
+	{
+		"ins": "ADD",
+		"format": "R",
+		"example": "ADD RD, RT, RS",
+		"result": "RD = RT + RS",
+		"ins_format": [
+			{
+				"name": "00",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "RS",
+				"length": 4
+			},
+			{
+				"name": "S/U",
+				"length": 4
+			},
+			{
+				"name": "00",
+				"length": 4
+			}
+		],
+		"op_code": 0
+	},
+	{
+		"ins": "SUB",
+		"format": "R",
+		"example": "SUB RD, RT, RS",
+		"result": "RD = RT - RS",
+		"ins_format": [
+			{
+				"name": "00",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "RS",
+				"length": 4
+			},
+			{
+				"name": "S/U",
+				"length": 4
+			},
+			{
+				"name": "01",
+				"length": 4
+			}
+		],
+		"op_code": 0
+	},
+	{
+		"ins": "ADDI",
+		"format": "I",
+		"example": "ADDI RD, RT, #SLIT12",
+		"result": "RD = RT + SLIT12",
+		"ins_format": [
+			{
+				"name": "05",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "SLIT12",
+				"length": 4
+			}
+		],
+		"op_code": 5
+	},
+	{
+		"ins": "SUBI",
+		"format": "I",
+		"example": "SUBI RD, RT, #SLIT12",
+		"result": "RD = RT - SLIT12",
+		"ins_format": [
+			{
+				"name": "06",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "SLIT12",
+				"length": 4
+			}
+		],
+		"op_code": 6
+	},
+	{
+		"ins": "AND",
+		"format": "R",
+		"example": "AND RD, RT, RS",
+		"result": "RD = RT & RS",
+		"ins_format": [
+			{
+				"name": "00",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "RS",
+				"length": 4
+			},
+			{
+				"name": "S/U",
+				"length": 4
+			},
+			{
+				"name": "02",
+				"length": 4
+			}
+		],
+		"op_code": 0
+	},
+	{
+		"ins": "OR",
+		"format": "R",
+		"example": "OR RD, RT, RS",
+		"result": "RD = RT | RS",
+		"ins_format": [
+			{
+				"name": "00",
+				"length": 4
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "RS",
+				"length": 4
+			},
+			{
+				"name": "S/U",
+				"length": 4
+			},
+			{
+				"name": "03",
+				"length": 4
+			}
+		],
+		"op_code": 0
+	},
+	{
+		"ins": "XOR",
+		"format": "R",
+		"example": "XOR RD, RT, RS",
+		"result": "RD = RT ^ RS",
+		"ins_format": [
+			{
+				"name": "00",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "RS",
+				"length": 4
+			},
+			{
+				"name": "S/U",
+				"length": 4
+			},
+			{
+				"name": "04",
+				"length": 4
+			}
+		],
+		"op_code": 0
+	},
+	{
+		"ins": "NAND",
+		"format": "R",
+		"example": "NAND RD, RT, RS",
+		"result": "RD = ~(RT & RS)",
+		"ins_format": [
+			{
+				"name": "00",
+				"length": 4
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "RS",
+				"length": 4
+			},
+			{
+				"name": "S/U",
+				"length": 4
+			},
+			{
+				"name": "05",
+				"length": 4
+			}
+		],
+		"op_code": 0
+	},
+	{
+		"ins": "NOR",
+		"format": "R",
+		"example": "NOR RD, RT, RD",
+		"result": "RD = ~(RT | RS)",
+		"ins_format": [
+			{
+				"name": "00",
+				"length": 4
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "RS",
+				"length": 4
+			},
+			{
+				"name": "S/U",
+				"length": 4
+			},
+			{
+				"name": "06",
+				"length": 4
+			}
+		],
+		"op_code": 0
+	},
+	{
+		"ins": "XNOR",
+		"format": "R",
+		"example": "NOR RD, RT, RD",
+		"result": "RD = ~(RT ^ RS)",
+		"ins_format": [
+			{
+				"name": "00",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "RS",
+				"length": 4
+			},
+			{
+				"name": "S/U",
+				"length": 4
+			},
+			{
+				"name": "07",
+				"length": 4
+			}
+		],
+		"op_code": 0
+	},
+	{
+		"ins": "NOT",
+		"format": "R",
+		"example": "NOT RD, RS",
+		"result": "RD = ~RS",
+		"ins_format": [
+			{
+				"name": "00",
+				"length": 4
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RS",
+				"length": 4
+			},
+			{
+				"name": "RS",
+				"length": 4
+			},
+			{
+				"name": "S/U",
+				"length": 4
+			},
+			{
+				"name": "08",
+				"length": 4
+			}
+		],
+		"op_code": 0
+	},
+	{
+		"ins": "ANDI",
+		"format": "I",
+		"example": "ANDI RD, RT, #LIT12",
+		"result": "RD = RT & LIT12",
+		"ins_format": [
+			{
+				"name": "07",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "LIT12",
+				"length": 12
+			}
+		],
+		"op_code": 7
+	},
+	{
+		"ins": "ORI",
+		"format": "I",
+		"example": "ORI RD, RT, #LIT12",
+		"result": "RD = RT | LIT12",
+		"ins_format": [
+			{
+				"name": "08",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "LIT12",
+				"length": 12
+			}
+		],
+		"op_code": 8
+	},
+	{
+		"ins": "XORI",
+		"format": "I",
+		"example": "XORI RD, RT, #LIT12",
+		"result": "RD = RT ^ LIT12",
+		"ins_format": [
+			{
+				"name": "09",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "LIT12",
+				"length": 12
+			}
+		],
+		"op_code": 9
+	},
+	{
+		"ins": "NANDI",
+		"format": "I",
+		"example": "NANDI RD, RT, #LIT12",
+		"result": "RD = ~(RT & LIT12)",
+		"ins_format": [
+			{
+				"name": "10",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "LIT12",
+				"length": 12
+			}
+		],
+		"op_code": 10
+	},
+	{
+		"ins": "NORI",
+		"format": "I",
+		"example": "NORI RD, RT, #LIT12",
+		"result": "RD = ~(RT | LIT12)",
+		"ins_format": [
+			{
+				"name": "11",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "LIT12",
+				"length": 12
+			}
+		],
+		"op_code": 11
+	},
+	{
+		"ins": "XNORI",
+		"format": "I",
+		"example": "XNORI RD, RT, #LIT12",
+		"result": "RD = ~(RT ^ LIT12)",
+		"ins_format": [
+			{
+				"name": "12",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "LIT12",
+				"length": 12
+			}
+		],
+		"op_code": 12
+	},
+	{
+		"ins": "SLL",
+		"format": "R",
+		"example": "SLL RD, RT, #LIT4",
+		"result": "RD = RT << LIT4",
+		"ins_format": [
+			{
+				"name": "00",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "S/U",
+				"length": 12
+			},
+			{
+				"name": "LIT4",
+				"length": 5
+			},
+			{
+				"name": "09",
+				"length": 4
+			}
+		],
+		"op_code": 0
+	},
+	{
+		"ins": "SRL",
+		"format": "R",
+		"example": "SRL RD, RT, #LIT4",
+		"result": "RD = RT >> LIT4",
+		"ins_format": [
+			{
+				"name": "00",
+				"length": 5
+			},
+			{
+				"name": "RD",
+				"length": 4
+			},
+			{
+				"name": "RT",
+				"length": 4
+			},
+			{
+				"name": "S/U",
+				"length": 12
+			},
+			{
+				"name": "LIT4",
+				"length": 5
+			},
+			{
+				"name": "10",
+				"length": 4
+			}
+		],
+		"op_code": 0
+	}
+]
